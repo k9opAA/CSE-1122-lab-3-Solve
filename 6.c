@@ -2,29 +2,29 @@ Write a program to calculate the factorial of a positive integer quantity (witho
 
 #include <stdio.h>
 
-// Function to calculate factorial
 unsigned long long factorial(int n) {
     unsigned long long result = 1;
-
     for (int i = 1; i <= n; ++i) {
         result *= i;
     }
-
     return result;
 }
 
 int main() {
-    int num;
+    int number;
 
     printf("Enter a positive integer: ");
-    scanf("%d", &num);
-
-    if (num < 0) {
+    scanf("%d", &number);
+    
+    if (number < 0) {
         printf("Factorial is not defined for negative numbers.\n");
     } else {
-        unsigned long long fact = factorial(num);
-        printf("Factorial of %d = %llu\n", num, fact);
+        unsigned long long fact = factorial(number);
+        printf("Factorial of %d is %llu\n", number, fact);
     }
+
+    return 0;
+}
 
     return 0;
 }
